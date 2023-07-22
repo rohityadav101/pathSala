@@ -266,13 +266,14 @@ const themesOptions = [
         root: {
           background:"#fff",
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            border: "none",
+           
             boxShadow: "none",
+            borderColor: "#3E53A0 !important",
           },
         },
         notchedOutline: {
         
-          borderColor: "#E6EBF1",
+          borderColor: "#E6EBF1 ",
         },
         input: {
           borderRadius: "10px",
