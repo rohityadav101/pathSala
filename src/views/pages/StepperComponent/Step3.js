@@ -83,49 +83,48 @@ export default function Step3() {
             </Box>
           
           </Box>
-          <Box pt={10}>
-            <Grid container spacing={3}>
-              <Grid item sm={5}>
+          <Box pt={2}>
+          <Grid container spacing={3}>
+              <Grid item xs={12} sm={6} md={12} lg={5}>
                 <Button
                   variant="contained"
-                  
+              
                   color="Primary"
+                  fullWidth
                 >
                   More about yourself ---<BsChevronRight/>
                 </Button>
               </Grid>
-              <Grid item sm={7}>
-                <Box
-                  className="progressbarbox"
-                  display="flex"
-                  alignItems="center"
-                >
+              <Grid item xs={12} sm={6} md={12} lg={7}>
+                <Box className="progressbarbox" display="flex" alignItems="center">
                   <Typography
                     variant="body1"
                     style={{
                       color: "#1A3353",
                       fontSize: "12px",
                       fontWeight: "500",
-                      whiteSpace: "pre",
+                      whiteSpace:"pre"
                     }}
                   >
                     In-Progress
                   </Typography>
                   <Box ml={1} width="100%">
-                    <BorderLinearProgress variant="determinate" value={30} />
+
+                  <BorderLinearProgress variant="determinate" value={30} />
                   </Box>
                   <Box ml={1}>
-                    <Typography
-                      variant="body1"
-                      style={{
-                        color: "#1A3353",
-                        fontSize: "12px",
-                        fontWeight: "500",
-                        whiteSpace: "pre",
-                      }}
-                    >
-                      30%
-                    </Typography>
+
+                  <Typography
+                    variant="body1"
+                    style={{
+                      color: "#1A3353",
+                      fontSize: "12px",
+                      fontWeight: "500",
+                      whiteSpace:"pre"
+                    }}
+                  >
+                    30%
+                  </Typography>
                   </Box>
                 </Box>
               </Grid>

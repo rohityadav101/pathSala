@@ -77,7 +77,7 @@ export default function YourPersonal() {
               <Grid item xs={12} sm={6} md={12} lg={5}>
                 <Button
                   variant="contained"
-              
+                  style={{whiteSpace:"pre"}}
                   color="Primary"
                   fullWidth
                 >
