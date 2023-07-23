@@ -15,7 +15,7 @@ const useStyle = makeStyles((theme) => ({
     transition:"0.6s ease all",
     backgroundColor: "#eceef0 !important",
     "&:hover":{
-      boxShadow:"5px 5px 20px #000",
+      boxShadow:"5px 5px 20px #00000085",
 
     },
     "& .mainBoxBottom": {

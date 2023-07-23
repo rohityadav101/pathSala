@@ -248,9 +248,9 @@ const themesOptions = [
           boxShadow: "0px 4px 4px 0px #00000040",
           borderRadius: "30px !important",
           backgroundColor: "#fff",
-          "@media(max-width:767px)": {
-            padding: "20px !important",
-          },
+          // "@media(max-width:767px)": {
+          //   padding: "20px !important",
+          // },
         },
       },
       MuiIconButton: {

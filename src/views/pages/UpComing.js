@@ -60,16 +60,13 @@ const cardDetails = [
     img: "images/ind.png",
   },
   {
-    img: "images/ind.png",
-    notbet: "fasle",
+    img: "images/ind1.png",
   },
   {
-    img: "images/ind.png",
-    notbet: "fasle",
+    img: "images/ind3.png",
   },
   {
-    img: "images/ind.png",
-    notbet: "fasle",
+    img: "images/ind2.png",
   },
 ];
 export default function UpComing({ head }) {

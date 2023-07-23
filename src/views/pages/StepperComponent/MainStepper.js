@@ -11,7 +11,7 @@ import Step5 from "./Step5";
 import Motion from "src/component/Motion";
 const useStyles = makeStyles((theme) => ({
   mainStepperBox: {
-    height:"545px",
+    height:"555px",
     [theme.breakpoints.down("sm")]:{
         height:"auto",
     },

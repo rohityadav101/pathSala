@@ -68,11 +68,17 @@ export default function UserInfo() {
   const initialValues = {
     Category: "",
     categoryImage: "",
-    categoryImageApi: "",
+    name:"",
+    email:"",
+    phone:"",
+    
   };
   const validationSchema = yup.object().shape({
     Category: yup.string().required("Category name is required."),
     categoryImage: yup.string().required("Image is required."),
+    name:yup.string().required("name is required."),
+    email:yup.string().required("email is required."),
+    phone:yup.string().required("phone is required."),
   });
   const handleSubmitDataFun = async (values) => {};
   return (
@@ -154,11 +160,7 @@ export default function UserInfo() {
                               error
                             />
                           </Box>
-                        </Form>
-                      )}
-                    </Formik>
-                  </Box>
-                  <Box pb={2}>
+                          <Box pb={2}>
                     <Box mb={1}>
                       <Typography variant="body2" style={{ fontWeight: "500" }}>
                         Name
@@ -167,7 +169,17 @@ export default function UserInfo() {
                     <TextField
                       variant="outlined"
                       placeholder="Enter your full name"
+                      name="name"
+                      value={values.name}
+                      error={Boolean(
+                        touched.name && errors.name
+                      )}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                     />
+                         <FormHelperText error>
+                      {touched.name && errors.name}
+                    </FormHelperText>
                   </Box>
 
                   <Box pb={2}>
@@ -179,8 +191,18 @@ export default function UserInfo() {
 
                     <TextField
                       variant="outlined"
+                      name="email"
                       placeholder="Enter your email address"
+                      value={values.email}
+                      error={Boolean(
+                        touched.email && errors.email
+                      )}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                     />
+                      <FormHelperText error>
+                      {touched.email && errors.email}
+                    </FormHelperText>
                   </Box>
                   <Box pb={2}>
                     <Box mb={1}>
@@ -194,19 +216,39 @@ export default function UserInfo() {
                         style={{ width: "70px" }}
                         variant="outlined"
                         placeholder="+91"
+                        
+                        defaultValue="+91"
+                    
+                      
                       />
                       &nbsp; &nbsp;
                       <TextField
                         variant="outlined"
                         placeholder="Enter your phone number"
+                        value={values.phone}
+                        type="number"
+                        name="phone"
+                      error={Boolean(
+                        touched.phone && errors.phone
+                      )}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                       />
                     </Box>
+                    <FormHelperText error>
+                      {touched.phone && errors.phone}
+                    </FormHelperText>
                   </Box>
                   <Box pt={2}>
-                    <Button style={{backgroundColor:"#C42D28", boxShdow:"none",color:"#fff" }} fullWidth variant="contained" color="primary">
+                    <Button type="submit" style={{backgroundColor:"#C42D28", boxShdow:"none",color:"#fff" }} fullWidth variant="contained" color="primary">
                       20% Profile Completed ---<BsChevronRight/>
                     </Button>
                   </Box>
+                        </Form>
+                      )}
+                    </Formik>
+                  </Box>
+              
                 </Box>
               </Box>
             </Paper>{" "}
